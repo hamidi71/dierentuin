@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<!-- maak dieren -->
+    <bean id="poes" class="org.biz.dierentuin2.Poes" />
+	<bean id="hond" class="org.biz.dierentuin2.Hond" />
+	<bean id="forel" class="org.biz.dierentuin2.Forel" />
+    	
+	<!-- maak dierentuin en vul met dieren -->
+    <bean id="aquarium" class="org.biz.dierentuin2.Aquarium">
+		<constructor-arg ref="forel"/>
+	</bean>
+		
+    <bean id="hok" class="org.biz.dierentuin2.Hok">
+		<property name="hond" ref="hond" />
+		<property name="poes" ref="poes" />
+	</bean>
+</beans>
