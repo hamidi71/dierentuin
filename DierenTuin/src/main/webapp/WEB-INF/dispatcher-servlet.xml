@@ -15,22 +15,7 @@
 						http://www.springframework.org/schema/aop/spring-aop.xsd
 						http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd">
 
-	<context:annotation-config/>
-	<context:component-scan base-package="org.biz.dierentuin5.model" />
-	<context:component-scan base-package="org.biz.dierentuin5.dao" />
-		
-    <tx:annotation-driven />
-    	
-	<bean id="dataSource"
-		class="org.apache.commons.dbcp.BasicDataSource"
-		p:driverClassName="org.hsqldb.jdbcDriver" p:url="jdbc:hsqldb:mem:dierentuindb"
-		p:username="sa" p:password="" />
-	
-	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-        <property name="persistenceUnitName" value="PU"/>
-	</bean>
-	
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
-		p:entityManagerFactory-ref="entityManagerFactory" />
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+    		p:prefix="/jsp/" p:suffix=".jsp" />
 	
 </beans>
