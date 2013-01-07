@@ -25,14 +25,14 @@ public class AquariumDAO extends AbstractDAO<Aquarium> {
 	@SuppressWarnings("unchecked")
 	public List<Forel> getForellen(final Aquarium aquarium) {
 		return  em.createQuery(
-				"SELECT f FROM Forel f WHERE f.aquarium = :Aquarium ORDER BY f.Naam")
+				"SELECT f FROM Forel f WHERE f.aquarium = :Aquarium ORDER BY f.naam")
 				.setParameter("Aquarium", aquarium).getResultList();
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Plant> getPlanten(final Aquarium aquarium) {
 		return  em.createQuery(
-				"SELECT p FROM Plant p WHERE p.aquarium = :Aquarium ORDER BY p.Naam")
+				"SELECT p FROM Plant p WHERE p.aquarium = :Aquarium ORDER BY p.naam")
 				.setParameter("Aquarium", aquarium).getResultList();
 	}	
 	

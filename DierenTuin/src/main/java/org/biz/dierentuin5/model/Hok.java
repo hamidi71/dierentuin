@@ -30,7 +30,7 @@ public class Hok {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int hokId;
 
-	private String Naam;
+	private String naam;
 	
 	public Hok() {
 	}
@@ -51,11 +51,11 @@ public class Hok {
 	}
 
 	public String getNaam() {
-		return Naam;
+		return naam;
 	}
 
 	public void setNaam(String naam) {
-		Naam = naam;
+		this.naam = naam;
 	}
 
 	public List<Hond> getHonden() {

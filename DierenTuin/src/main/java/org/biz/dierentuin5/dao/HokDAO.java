@@ -25,14 +25,14 @@ public class HokDAO extends AbstractDAO<Hok> {
 	@SuppressWarnings("unchecked")
 	public List<Hond> getHonden(final Hok hok) {
 		return  em.createQuery(
-				"SELECT h FROM Hond h WHERE h.hok.hokId = " + hok.getHokId() + " ORDER BY h.Naam")
+				"SELECT h FROM Hond h WHERE h.hok.hokId = " + hok.getHokId() + " ORDER BY h.naam")
 				.getResultList();
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Poes> getPoezen(final Hok hok) {
 		return  em.createQuery(
-				"SELECT p FROM Poes p WHERE p.hok = :Hok ORDER BY p.Naam")
+				"SELECT p FROM Poes p WHERE p.hok = :Hok ORDER BY p.naam")
 				.setParameter("Hok", hok).getResultList();
 	}
 	

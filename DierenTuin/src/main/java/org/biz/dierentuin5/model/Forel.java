@@ -28,7 +28,7 @@ public class Forel implements IDier {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int forelId;
 
-	private String Naam;
+	private String naam;
 	
 	public Forel() {
 	}
@@ -48,12 +48,12 @@ public class Forel implements IDier {
 
 
 	public String getNaam() {
-		return Naam;
+		return naam;
 	}
 
 
 	public void setNaam(String naam) {
-		Naam = naam;
+		this.naam = naam;
 	}
 
 

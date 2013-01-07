@@ -23,7 +23,7 @@ public abstract class AbstractDAO< T > {
 	@SuppressWarnings("unchecked")
 	public List<T> find(final String naam) {
 		return  em.createQuery(
-				"SELECT e FROM " + classT.getSimpleName() + " e WHERE e.Naam LIKE :Naam")
+				"SELECT e FROM " + classT.getSimpleName() + " e WHERE e.naam LIKE :Naam")
 				.setParameter("Naam", naam).getResultList();
 	}
 

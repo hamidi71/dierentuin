@@ -30,7 +30,7 @@ public class Hond implements IDier {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int hondId;
 
-	private String Naam;
+	private String naam;
 	
 	public Hond() {
 		log.info("Hond " + getHondId() + " geboren");
@@ -49,11 +49,11 @@ public class Hond implements IDier {
 	}
 
 	public String getNaam() {
-		return Naam;
+		return naam;
 	}
 
 	public void setNaam(String naam) {
-		Naam = naam;
+		this.naam = naam;
 	}
 
 	public Hok getHok() {

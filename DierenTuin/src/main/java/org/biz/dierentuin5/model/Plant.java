@@ -28,7 +28,7 @@ public class Plant {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int plantId;
 
-	private String Naam;
+	private String naam;
 	
 	private int size; 
 		
@@ -70,11 +70,11 @@ public class Plant {
 	}
 
 	public String getNaam() {
-		return Naam;
+		return naam;
 	}
 
 	public void setNaam(String naam) {
-		Naam = naam;
+		this.naam = naam;
 	}
 
 	public Aquarium getAquarium() {

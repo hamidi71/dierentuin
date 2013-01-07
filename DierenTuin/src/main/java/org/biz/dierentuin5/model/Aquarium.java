@@ -12,7 +12,6 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -29,7 +28,7 @@ public class Aquarium {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int aquariumId;
 
-	private String Naam;
+	private String naam;
 	
 	public Aquarium() {
 	}
@@ -49,11 +48,11 @@ public class Aquarium {
 	}
 
 	public String getNaam() {
-		return Naam;
+		return naam;
 	}
 
 	public void setNaam(String naam) {
-		Naam = naam;
+		this.naam = naam;
 	}
 
 	public List<Forel> getForellen() {
